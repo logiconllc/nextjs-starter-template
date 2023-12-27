@@ -12,28 +12,28 @@ This is a Nextjs Starter Template.
 
 ## Description
 
-This is a starter template in nextjs 13 with app router. Eslint, Prettier and Husky is configured. Class variant authority is added to create reusable components. Icons library is added to create react icon components from SVG icons. 
+This is a starter template in nextjs 13 with app router. Eslint, Prettier and Husky is configured. Class variant authority is added to create reusable components. Icons library is added to create react icon components from SVG icons.
 
 ## Installation
 
 1. Clone this repository.
 2. Install the necessary dependencies with:
-   ``` npm install ```
+   `npm install`
 3. Configure environment variables as needed.
-4. Go to to icons folder and install necessary dependencies with: 
-``` npm install ```
+4. Go to to icons folder and install necessary dependencies with:
+   `npm install`
 
 ## Usage
 
 1. Start the development server:
-     ```npm run dev```
+   `npm run dev`
 2. Access the application at `http://localhost:3000`.
 
 ## Features
 
 - ### CVA
-  CVA (Class Variant Authority) is used to create reusable components. 
 
+  CVA (Class Variant Authority) is used to create reusable components.
 
   #### Example Usage
 
@@ -102,11 +102,10 @@ This is a starter template in nextjs 13 with app router. Eslint, Prettier and Hu
 
 [![Build Status](https://img.shields.io/travis/username/repo.svg)](https://travis-ci.org/username/repo)
 
-
 ## Code Examples
 
 ```javascript
 const exampleCode = () => {
- // Your code here
+  // Your code here
 };
-
+```
