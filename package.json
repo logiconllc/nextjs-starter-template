@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "lint": "eslint \"**/*.ts\" \"**/*.tsx\" --fix",
+    "format": "prettier --write \"**/*.ts\" \"**/*.tsx\""
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",

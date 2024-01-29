@@ -7,10 +7,10 @@ import React from 'react';
 const Buttons = () => (
   <>
     <div className="my-3">
-      <Button onClick={() => console.log('Default Button Clicked')}>Default Button</Button>
+      <Button onClick={() => {}}>Default Button</Button>
     </div>
     <div className="my-3">
-      <Button intent="primary" onClick={() => console.log('Primary Button Clicked')}>
+      <Button intent="primary" onClick={() => {}}>
         <span className="flex">
           <span className="mr-2 flex items-center">Primary Button</span>
           <span className="flex items-center">
@@ -20,7 +20,7 @@ const Buttons = () => (
       </Button>
     </div>
     <div className="my-3">
-      <Button intent="secondary" onClick={() => console.log('Secondary Button Clicked')}>
+      <Button intent="secondary" onClick={() => {}}>
         Secondary Button
       </Button>
     </div>
