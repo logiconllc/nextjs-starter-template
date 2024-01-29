@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Buttons from './components/Buttons';
+import Buttons from '../../components/demo/Buttons';
 
 const Page = (): ReactNode => (
   <div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowIcon } from '@/icons';
-import Button from '@/ui/button';
+import Button from '@/components/shared-components/button';
 import React from 'react';
 
 const Buttons = () => (
