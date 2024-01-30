@@ -23,7 +23,9 @@ export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   children: ReactNode;
 }
 
-const Button: React.FC<IButtonProps> = ({ className, intent, size, children, onClick, ...props }): ReactNode => (
+const Button: React.FC<IButtonProps> = ({
+  className, intent, size, children, onClick, ...props
+}): ReactNode => (
   <button type="button" className={button({ intent, size, className })} onClick={onClick} {...props}>
     {children}
   </button>
