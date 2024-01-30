@@ -10,4 +10,9 @@ export const GET = () => {
   return res.json({ message: 'Hello from Next.js!' });
 };
 
-export default GET;
+export const POST = () => {
+  // you can also catch the request by adding this "req: NextApiRequest" in funtion params.
+  // Function name should be GET, PUT, POST so on according to Http method that you want to handle.
+  const res = NextResponse;
+  return res.json({ message: 'Hello from Next.js!' });
+};
