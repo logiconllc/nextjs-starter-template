@@ -1,5 +1,6 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
+
 export const ArrowIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -13,3 +14,5 @@ export const ArrowIcon = (props: SVGProps<SVGSVGElement>) => (
     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
   </svg>
 );
+
+export default ArrowIcon;

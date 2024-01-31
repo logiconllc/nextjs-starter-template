@@ -19,26 +19,14 @@ const button = cva(['text-white', 'rounded'], {
   },
 });
 
-export interface IButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {
+export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof button> {
   children: ReactNode;
 }
 
 const Button: React.FC<IButtonProps> = ({
-  className,
-  intent,
-  size,
-  children,
-  onClick,
-  ...props
+  className, intent, size, children, onClick, ...props
 }): ReactNode => (
-  <button
-    type="button"
-    className={button({ intent, size, className })}
-    onClick={onClick}
-    {...props}
-  >
+  <button type="button" className={button({ intent, size, className })} onClick={onClick} {...props}>
     {children}
   </button>
 );
