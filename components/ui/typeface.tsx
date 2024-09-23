@@ -7,7 +7,7 @@ type Props = {
 export const H1 = ({ children, className, ...props }: Props) => {
   return (
     <h1
-      className={cn("lg:text-4xl md:text-3xl sm:text-2xl text-xl", className)}
+      className={cn("text-xl sm:text-2xl md:text-3xl lg:text-4xl", className)}
       {...props}
     >
       {children}
@@ -18,7 +18,7 @@ export const H1 = ({ children, className, ...props }: Props) => {
 export const H2 = ({ children, className, ...props }: Props) => {
   return (
     <h2
-      className={cn("lg:text-3xl md:text-2xl sm:text-xl text-lg", className)}
+      className={cn("text-lg sm:text-xl md:text-2xl lg:text-3xl", className)}
       {...props}
     >
       {children}
@@ -29,7 +29,7 @@ export const H2 = ({ children, className, ...props }: Props) => {
 export const H3 = ({ children, className, ...props }: Props) => {
   return (
     <h3
-      className={cn("lg:text-2xl md:text-xl sm:text-lg text-base", className)}
+      className={cn("text-base sm:text-lg md:text-xl lg:text-2xl", className)}
       {...props}
     >
       {children}
@@ -40,7 +40,7 @@ export const H3 = ({ children, className, ...props }: Props) => {
 export const H4 = ({ children, className, ...props }: Props) => {
   return (
     <h4
-      className={cn("lg:text-xl md:text-lg sm:text-base text-sm", className)}
+      className={cn("text-sm sm:text-base md:text-lg lg:text-xl", className)}
       {...props}
     >
       {children}
@@ -51,7 +51,7 @@ export const H4 = ({ children, className, ...props }: Props) => {
 export const H5 = ({ children, className, ...props }: Props) => {
   return (
     <h5
-      className={cn("lg:text-lg md:text-base sm:text-sm text-xs", className)}
+      className={cn("text-xs sm:text-sm md:text-base lg:text-lg", className)}
       {...props}
     >
       {children}
@@ -62,7 +62,7 @@ export const H5 = ({ children, className, ...props }: Props) => {
 export const H6 = ({ children, className, ...props }: Props) => {
   return (
     <h6
-      className={cn("lg:text-base md:text-sm sm:text-xs text-2xs", className)}
+      className={cn("text-2xs sm:text-xs md:text-sm lg:text-base", className)}
       {...props}
     >
       {children}
