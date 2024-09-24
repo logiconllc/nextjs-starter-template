@@ -1,35 +1,31 @@
 {
-  "extends": ["airbnb", "next/core-web-vitals"],
-  "parser": "@typescript-eslint/parser",
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["tailwindcss"],
+  "ignorePatterns": ["**/fixtures/**"],
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "off"
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["cn", "cva"],
+      "config": "tailwind.config.cjs"
+    },
+    "next": {
+      "rootDir": ["*/"]
+    }
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "parserOptions": {
-        "project": ["./tsconfig.json"]
-      }
+      "parser": "@typescript-eslint/parser"
     }
-  ],
-  "rules": {
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "max-len": ["error", { "code": 120 }],
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
-    "react/jsx-props-no-spreading": "off",
-    "object-curly-newline": ["error", { "multiline": true, "minProperties": 4 }],
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": ["arrow-function", "function-declaration"],
-        "unnamedComponents": "arrow-function"
-      }
-    ]
-  }
+  ]
 }

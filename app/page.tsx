@@ -1,7 +1,13 @@
-import { ReactNode } from 'react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-const Home = (): ReactNode => (
-  <main className="flex min-h-screen flex-col items-center justify-between p-24">This is Home Page</main>
-);
-
-export default Home;
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center p-24">
+      This is Home Page
+      <Button asChild className="mt-4">
+        <Link href="/demo">Go to demo page</Link>
+      </Button>
+    </main>
+  );
+}
