@@ -10,23 +10,23 @@ This is a starter project using Next.js, Typescript, Yarn, Shadcn/UI, Prettier, 
 - 🎨 **Styling**: Use TailwindCSS for consistent and efficient styling.
 - 🖌️ **UI Components**: Utilize Shadcn/UI for building user interface components.
 
-
 ## 📋 Table of Contents
 
-- [📥 Installation](#📥-installation)
-- [🚀 Usage](#🚀-usage)
-- [🖼️ Icons](#🖼️-icons)
-- [📝 Forms and Validation](#📝-forms-and-validation)
-  - [📦 Installation](#📦-installation)
-  - [🛠️ Usage](#🛠️-usage)
-- [📊 Tables](#📊-tables)
-  - [📦 Installation](#📦-installation-1)
-  - [🛠️ Usage](#🛠️-usage-1)
-- [🔧 Development](#🔧-development)
-  - [🎨 Prettier](#🎨-prettier)
-  - [🖌️ Shadcn/UI](#🖌️-shadcnui)
+- [📥 Installation](#installation)
+- [🚀 Usage](#usage)
+- [🖼️ Icons](#icons)
+- [📝 Forms and Validation](#forms-and-validation)
+  - [📦 Installation](#installation-1)
+  - [🛠️ Usage](#usage-1)
+- [📊 Tables](#tables)
+  - [📦 Installation](#installation-2)
+  - [🛠️ Usage](#usage-2)
+- [🔧 Development](#development)
+  - [🎨 Prettier](#prettier)
+  - [🖌️ Shadcn/UI](#shadcnui)
+- [📚 Documentation Links](#documentation-links)
 
-## 📥 Installation
+## Installation
 
 1. Clone the repository:
 
@@ -40,7 +40,7 @@ This is a starter project using Next.js, Typescript, Yarn, Shadcn/UI, Prettier, 
    yarn install
    ```
 
-## 🚀 Usage
+## Usage
 
 To start the development server:
 
@@ -60,7 +60,7 @@ To start the production server:
 yarn start
 ```
 
-## 🖼️ Icons
+## Icons
 
 This project uses `react-icons` for icons. You can easily include any icon from popular icon libraries.
 
@@ -74,13 +74,11 @@ const MyComponent = () => {
 };
 ```
 
-Refer to the [react-icons documentation](https://react-icons.github.io/react-icons/) for more details on available icons and usage.
-
-## 📝 Forms and Validation
+## Forms and Validation
 
 To handle forms, this project uses `react-hook-form`. For form validations, `zod` is used.
 
-### 📦 Installation
+### Installation
 
 Install the required libraries:
 
@@ -88,7 +86,7 @@ Install the required libraries:
 yarn add react-hook-form zod
 ```
 
-### 🛠️ Usage
+### Usage
 
 Here's an example of how to create a form with validation:
 
@@ -161,13 +159,11 @@ export function ProfileForm() {
 export default ProfileForm;
 ```
 
-Refer to the [react-hook-form documentation](https://react-hook-form.com/get-started) and [zod documentation](https://zod.dev/) for more details.
-
-## 📊 Tables
+## Tables
 
 This project uses `@tanstack/react-table` for creating and managing tables.
 
-### 📦 Installation
+### Installation
 
 Install the required library:
 
@@ -175,7 +171,7 @@ Install the required library:
 yarn add @tanstack/react-table
 ```
 
-### 🛠️ Usage
+### Usage
 
 Here's an example of how to create a table:
 
@@ -391,11 +387,9 @@ export default async function DemoPage() {
 }
 ```
 
-Refer to the [TanStack Table documentation](https://tanstack.com/table/v8/docs/guide/introduction) for more details on available features and usage.
+## Development
 
-## 🔧 Development
-
-### 🎨 Prettier
+### Prettier
 
 This project uses Prettier for code formatting. The Prettier Tailwind plugin is also included to ensure Tailwind classes are ordered correctly.
 
@@ -405,6 +399,14 @@ To format your code, run:
 yarn prettier
 ```
 
-### 🖌️ Shadcn/UI
+### Shadcn/UI
 
-Shadcn/UI is used for the UI components. Refer to the [Shadcn/UI documentation](https://ui.shadcn.com/docs) for more details on how to use the components.
+Shadcn/UI is used for the UI components.
+
+## Documentation Links
+
+- [react-icons documentation](https://react-icons.github.io/react-icons/)
+- [react-hook-form documentation](https://react-hook-form.com/get-started)
+- [zod documentation](https://zod.dev/)
+- [TanStack Table documentation](https://tanstack.com/table/v8/docs/guide/introduction)
+- [Shadcn/UI documentation](https://ui.shadcn.com/docs)
