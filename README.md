@@ -1,6 +1,6 @@
 # Next Starter Template
 
-This is a starter project using Next.js, Typescript, Yarn, Shadcn/UI, Prettier, and the Prettier Tailwind plugin.
+This is a starter project using Next.js, Typescript, NPM, Shadcn/UI, Prettier, and the Prettier Tailwind plugin.
 
 ## ⚠️ Important Notes
 
@@ -35,9 +35,9 @@ This is a starter project using Next.js, Typescript, Yarn, Shadcn/UI, Prettier, 
    cd nextjs-starter-template
    ```
 
-2. Install dependencies using Yarn:
+2. Install dependencies using NPM:
    ```bash
-   yarn install
+   npm install
    ```
 
 ## Usage
@@ -45,19 +45,19 @@ This is a starter project using Next.js, Typescript, Yarn, Shadcn/UI, Prettier, 
 To start the development server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 To build the project for production:
 
 ```bash
-yarn build
+npm run build
 ```
 
 To start the production server:
 
 ```bash
-yarn start
+npm run start
 ```
 
 ## Icons
@@ -67,7 +67,7 @@ This project uses `react-icons` for icons. You can easily include any icon from 
 To use an icon in your component:
 
 ```tsx
-import { FaBeer } from 'react-icons/fa';
+import { FaBeer } from "react-icons/fa";
 
 const MyComponent = () => {
   return <FaBeer />;
@@ -83,7 +83,7 @@ To handle forms, this project uses `react-hook-form`. For form validations, `zod
 Install the required libraries:
 
 ```bash
-yarn add react-hook-form zod
+npm install react-hook-form zod
 ```
 
 ### Usage
@@ -91,13 +91,13 @@ yarn add react-hook-form zod
 Here's an example of how to create a form with validation:
 
 ```tsx
-'use client';
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -106,29 +106,29 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   username: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
+    message: "Username must be at least 2 characters.",
   }),
 });
 
 export function ProfileForm() {
-    // 1. Define your form.
+  // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
     },
-  })
+  });
 
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    console.log(values);
   }
 
   return (
@@ -168,7 +168,7 @@ This project uses `@tanstack/react-table` for creating and managing tables.
 Install the required library:
 
 ```bash
-yarn add @tanstack/react-table
+npm install @tanstack/react-table
 ```
 
 ### Usage
@@ -183,22 +183,22 @@ We are going to build a table to show recent payments. Here's what our data look
 type Payment = {
   id: string;
   amount: number;
-  status: 'pending' | 'processing' | 'success' | 'failed';
+  status: "pending" | "processing" | "success" | "failed";
   email: string;
 };
 
 export const payments: Payment[] = [
   {
-    id: '728ed52f',
+    id: "728ed52f",
     amount: 100,
-    status: 'pending',
-    email: 'm@example.com',
+    status: "pending",
+    email: "m@example.com",
   },
   {
-    id: '489e1d42',
+    id: "489e1d42",
     amount: 125,
-    status: 'processing',
-    email: 'example@gmail.com',
+    status: "processing",
+    email: "example@gmail.com",
   },
   // ...
 ];
@@ -231,31 +231,31 @@ Let's start by building a basic table.
 First, we'll define our columns.
 
 ```tsx showLineNumbers title="app/payments/columns.tsx" {3,14-27}
-'use client';
+"use client";
 
-import { ColumnDef } from '@tanstack/react-table';
+import { ColumnDef } from "@tanstack/react-table";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type Payment = {
   id: string;
   amount: number;
-  status: 'pending' | 'processing' | 'success' | 'failed';
+  status: "pending" | "processing" | "success" | "failed";
   email: string;
 };
 
 export const columns: ColumnDef<Payment>[] = [
   {
-    accessorKey: 'status',
-    header: 'Status',
+    accessorKey: "status",
+    header: "Status",
   },
   {
-    accessorKey: 'email',
-    header: 'Email',
+    accessorKey: "email",
+    header: "Email",
   },
   {
-    accessorKey: 'amount',
-    header: 'Amount',
+    accessorKey: "amount",
+    header: "Amount",
   },
 ];
 ```
@@ -269,14 +269,14 @@ formatted, sorted and filtered.
 Next, we'll create a `<DataTable />` component to render our table.
 
 ```tsx showLineNumbers title="app/payments/data-table.tsx"
-'use client';
+"use client";
 
 import {
   ColumnDef,
   flexRender,
   getCoreRowModel,
   useReactTable,
-} from '@tanstack/react-table';
+} from "@tanstack/react-table";
 
 import {
   Table,
@@ -285,7 +285,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from "@/components/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -328,7 +328,7 @@ export function DataTable<TData, TValue>({
             table.getRowModel().rows.map((row) => (
               <TableRow
                 key={row.id}
-                data-state={row.getIsSelected() && 'selected'}
+                data-state={row.getIsSelected() && "selected"}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
@@ -360,17 +360,17 @@ export function DataTable<TData, TValue>({
 Finally, we'll render our table in our page component.
 
 ```tsx showLineNumbers title="app/payments/page.tsx" {22}
-import { Payment, columns } from './columns';
-import { DataTable } from './data-table';
+import { Payment, columns } from "./columns";
+import { DataTable } from "./data-table";
 
 async function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
   return [
     {
-      id: '728ed52f',
+      id: "728ed52f",
       amount: 100,
-      status: 'pending',
-      email: 'm@example.com',
+      status: "pending",
+      email: "m@example.com",
     },
     // ...
   ];
@@ -396,7 +396,7 @@ This project uses Prettier for code formatting. The Prettier Tailwind plugin is 
 To format your code, run:
 
 ```bash
-yarn prettier
+npm run prettier
 ```
 
 ### Shadcn/UI
